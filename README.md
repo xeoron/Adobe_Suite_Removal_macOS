@@ -1,0 +1,2 @@
+# Adobe_Suite_Removal_macOS
+ Remove Adobe Cruff.  On macOS Adobe uninstaller does not remove all things Adobe leaving remants behind that will run in the background and hit log files for failures. Also, when installing managed Adobe Packages they often need a fresh system without Adobe on it to either install or run the programs. This script will rip out most if not all Adobe Creative Cloud Suite of programs and remants to make your system cleaner for a fresh install.
