@@ -1,5 +1,6 @@
 #!/bin/bash
 # NAME: Adobe_Suite_Removal_macOS
+# Released under the GPL v3
 # Author: Jason Campisi
 # Version 2.0.0
 # Date: July 2017
