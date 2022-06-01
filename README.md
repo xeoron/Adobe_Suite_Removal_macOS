@@ -1,6 +1,6 @@
 #Script: Adobe_Suite_Removal_macOS.sh
 
- Remove Adobe Creative Cloud Cruff or fix a Adobe Polluted System that prevents Adobe products to run or install.
+ Remove Adobe Creative Cloud Cruff or fix a Adobe corrupted System that prevents Adobe products to run or install.
 
  Usage: sudo ./Adobe_Suite_Removal_macOS.sh
 
