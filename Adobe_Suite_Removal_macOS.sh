@@ -2,8 +2,8 @@
 # NAME: Adobe_Suite_Removal_macOS
 # Released under the GPL v3 https://www.gnu.org/licenses/gpl-3.0.en.html
 # Author: Jason Campisi
-# Version 2.0.0
-# Date: July 2017
+# Version 2.0.1
+# Date: November 2023
 # Systenm: For macOS X--> Current
 # 
 # Created to manage a lab of Macs and updating Adobe Managed Packages installed and used yearly for this task.
@@ -14,6 +14,8 @@
 #
 # Usage: sudo ./Adobe_Suite_Removal_macOS.sh
 
+echo "Adobe_Suite_Removal_macOS: Adobe uninstaller leaves a lot behind, this removes it."
+echo "Warning: this requires admin account password to work, which can't be blank!"
 
 echo "Destroying Adobe Daemons from respawning"
 sudo rm -rf /Library/LaunchAgents/com.adobe.*
