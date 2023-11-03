@@ -2,7 +2,7 @@
 # NAME: Adobe_Suite_Removal_macOS
 # Released under the GPL v3 https://www.gnu.org/licenses/gpl-3.0.en.html
 # Author: Jason Campisi
-# Version 2.0.1
+# Version 2.1.0
 # Date: November 2023
 # Systenm: For macOS X--> Current
 # 
@@ -18,23 +18,19 @@ echo "Adobe_Suite_Removal_macOS: Adobe uninstaller leaves a lot behind, this rem
 echo "Warning: this requires admin account password to work, which can't be blank!"
 
 echo "Destroying Adobe Daemons from respawning"
+echo "...removing the Adobe agents from starting"
 sudo rm -rf /Library/LaunchAgents/com.adobe.*
+echo "...removing the Adobe daemons from starting"
 sudo rm -rf /Library/LaunchDaemons/com.adobe.*
 
 echo "Stopping all things adobe running..."
 ps x | grep -i adobe |grep -v adobe | awk {'print $1'} | xargs kill -9
 
-echo "removing the Adobe agents from starting"
-sudo rm -rf /Library/LaunchAgents/com.adobe.*
-echo "removing the Adobe daemons from starting"
-sudo rm -rf /Library/LaunchDaemons/com.adobe.*
-echo "stopping the ACC and any other Adobe thing running"
-ps x | grep -i adobe |grep -v adobe | awk {'print $1'} | xargs kill -9
 
-echo “deleting /Library/Applications Support/Adobe/”
+echo “...deleting /Library/Applications Support/Adobe/”
 sudo rm -rf "/Library/Application Support/Adobe/"
 
-echo "removing Adobe programs in the /Applications/ folder"
+echo "...removing Adobe programs in the /Applications/ folder"
 cd /Applications/
 sudo rm -rf ./Adobe*
 echo "All Set!"
